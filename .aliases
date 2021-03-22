@@ -1,0 +1,44 @@
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+alias desk="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias docs="cd ~/Documents"
+
+# Editing and sourcing
+alias ea="$EDITOR $XDG_CONFIG_HOME/.aliases"
+alias egc="$EDITOR $XDG_CONFIG_HOME/.gitconfig"
+alias eh="$EDITOR /etc/hosts"
+alias erc="$EDITOR ~/.bashrc"
+
+alias src="source ~/.bashrc"
+
+# Cat files
+alias hosts="cat /etc/hosts"
+
+# Unix command shorthands
+alias apti="sudo apt install --yes"
+alias apti="sudo apt remove --yes"
+alias c="clear"
+alias uu="sudo apt update && sudo apt upgrade -y"
+
+alias la="ls --almost-all"
+alias ld="ls --directory */"  # Only list directories
+alias lh="ls --directory .*"  # Only list hidden items
+alias lt="ls $XDG_DATA_HOME/Trash"
+
+alias emptytrash="rm --force --recursive $XDG_DATA_HOME/Trash"  # Does not delete files in trash from external devices
+
+# Always on color and verbosity
+alias cp="cp --verbose"
+alias grep="grep --color=auto"
+alias ip="ip -c=auto"
+alias ln="ln --verbose"
+alias ls="ls -lv --color --group-directories-first --human-readable --literal"
+alias mkdir="mkdir --parents --verbose"
+alias mount="sudo mount --verbose"
+alias mv="mv --verbose"
+alias rm="rm --verbose"
