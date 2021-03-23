@@ -23,7 +23,6 @@ export ATOM_HOME="$XDG_CONFIG_HOME/.atom/"
 export GIT_CONFIG="$XDG_CONFIG_HOME/git/config"
 
 export GH_NO_UPDATE_NOTIFIER="1"
-export GH_TOKEN=""
 
 export GNUPGHOME="$XDG_CONFIG_HOME/gpg/"
 
@@ -32,7 +31,6 @@ export GPG_TTY=$(tty);
 
 export HOMEBREW_BAT="1"
 export HOMEBREW_CACHE="$XDG_CACHE_HOME/Homebrew/"
-export HOMEBREW_GITHUB_API_TOKEN=""
 export HOMEBREW_LOGS="$XDG_CACHE_HOME/Homebrew/Logs"
 export HOMEBREW_NO_ANALYTICS="1"
 export HOMEBREW_VERBOSE_USING_DOTS="1"
