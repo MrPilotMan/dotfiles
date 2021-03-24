@@ -1,0 +1,31 @@
+# Color Codes
+local CYAN='6'
+local GOLD='178'
+local GRAY='241'
+local GREEN='34'
+local RED='196'
+
+# Prompt Elements
+local LB="%F{$GRAY}[%f"    # Left bracket [
+local RB="%F{$GRAY}]%f"    # Right bracket ]
+
+local USER="%F{$GOLD}%n%f"   # Username
+local AT="%F{$GRAY}@%f"      # At symbol @
+local HOST="%F{$GREEN}%m%f"  # Host name
+local UAH=$LB$USER$AT$HOST
+
+local IN="%F{$GRAY}:%f"    # My symbol for 'in' :
+local DIR="%F{$CYAN}%c%f"  # Current directory you're 'in'
+local D="$DIR$RB"
+
+# Adds [#] to the front of the prompt if the current user has cached sudo credentials.
+function sudo_status { sudo -nv 2> /dev/null && echo "$LB%F{$RED}#%f$RB" }
+
+# Adds an emoji before the directory name.
+function cloud_dir { pwd | grep $HOME/cloud > /dev/null && echo " ☁️ " }
+
+# Adds a green diamond to the front of the prompt if connected to a vpn (uses my custom vpn manager script)
+function vpn_status { [[ -v VPN_SERVICE ]] && echo "$LB%F{$GREEN}♦︎%f$RB" }
+
+setopt prompt_subst  # Needed for $() to evaluate in single quotes.
+export PROMPT='$(sudo_status)$(vpn_status)$UAH $IN$(cloud_dir) $D '
