@@ -24,9 +24,9 @@ fi
 # Without resourcing .zshenv `HISTFILE` gets set to "$ZDOTDIR/.zsh_history" instead
 # of "$XDG_CACHE_HOME/zsh/.zsh_history", as specified in ~/.config/zsh/.zshenv
 source $XDG_CONFIG_HOME/zsh/.zshenv
-source $XDG_CONFIG_HOME/.tokens
-source $XDG_CONFIG_HOME/.prompt
 source $XDG_CONFIG_HOME/.aliases
+source $XDG_CONFIG_HOME/.prompt
+source $XDG_CONFIG_HOME/.tokens
 source $XDG_CONFIG_HOME/.vpnrc  # Used for my custom vpn manager script
 
 for script in $(ls ~/.scripts/**/*.(sh|zsh)); do source "$script"; done
