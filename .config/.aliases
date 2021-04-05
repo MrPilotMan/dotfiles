@@ -21,7 +21,7 @@ alias hosts="cat /etc/hosts"
 
 # Unix command shorthands
 alias apti="sudo apt install --yes"
-alias apti="sudo apt remove --yes"
+alias aptr="sudo apt remove --yes"
 alias c="clear"
 alias uu="sudo apt update && sudo apt upgrade -y"
 
